@@ -9,6 +9,7 @@ def pascal_triangle(n):
     """
     returns a list of integers
     representing Pascal's triangle
+    """
     
     if n <= 0:
         return []
@@ -45,4 +46,5 @@ def pascal_triangle(n):
  
         # for new line
         print()
+"""
 
