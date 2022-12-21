@@ -3,7 +3,6 @@
 """
 Module 0-pascal_triangle
 """
-from math import factorial
 
 def pascal_triangle(n):
     """
