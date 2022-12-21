@@ -3,6 +3,7 @@
 0-main file to test out the pascals_triangle
 """
 pascal_triangle = __import__('0-pascal_triangle').pascal_triangle
+print_pascal_triangle = __import__('alternative-algo').pascal_triangle
 
 def print_triangle(triangle):
     """
@@ -14,3 +15,4 @@ def print_triangle(triangle):
 
 if __name__ == "__main__":
    print_triangle(pascal_triangle(20))
+   print_pascal_triangle(12)
