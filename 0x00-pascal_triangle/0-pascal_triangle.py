@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-
 """
 Module 0-pascal_triangle
 """
+
 
 def pascal_triangle(n):
     """
     returns a list of integers
     representing Pascal's triangle
     """
-    
+
     if n <= 0:
         return []
 
@@ -31,4 +31,3 @@ def pascal_triangle(n):
         # add the row to the triangle
         triangle.append(row)
     return triangle
-
