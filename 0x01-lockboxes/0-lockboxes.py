@@ -2,6 +2,7 @@
 The localboxes algorithm
 """
 
+
 def canUnlockAll(boxes):
     """
     @params: boxes list of lists (set representation of boxes)
