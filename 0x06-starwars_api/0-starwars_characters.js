@@ -18,7 +18,7 @@ let characterNames =[];
 const getCharacters =  async () => {
     await new Promise( resolve => request(url , (err, res, body) => {
         if (err || res.statusCode !== 200) {
-            console.error('error', err | 'statusCode' , res.statusCode)
+            console.error('error', err, '| statusCode' , res.statusCode)
         }else {
             let chars = JSON.parse(body);
           characters = chars.characters;
