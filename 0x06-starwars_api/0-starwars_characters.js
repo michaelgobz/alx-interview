@@ -21,8 +21,9 @@ const getCharacters =  async () => {
             console.error('error', err | 'statusCode' , res.statusCode)
         }else {
             let chars = JSON.parse(body);
-            characters = chars.characters;
-        }
+          characters = chars.characters;
+          resolve();
+      }
     }))
 };
 
@@ -30,11 +31,12 @@ const getCharactersNames = async () => {
     if (characters.length > 0) {
         for (character in characters) {
             await new Promise ( resolve => request(character, (err, res, body) => {
-                if (err || res.statusCode) {
-                    console.error('error', err | 'statusCode' , res.statusCode)
+                if (err || res.statusCode !== 200) {
+                    console.error('error', err ,'| statusCode' , res.statusCode)
                 }else {
-                    let person = JSON.parse(body);
-                    characterNames = person.name;
+                  let person = JSON.parse(body);
+                  characterNames.push(person.name);
+                  resolve();
                 }
             }))
         }
