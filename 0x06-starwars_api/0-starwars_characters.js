@@ -29,7 +29,7 @@ const getCharacters =  async () => {
 
 const getCharactersNames = async () => {
     if (characters.length > 0) {
-        for (character in characters) {
+        for (let character in characters) {
             await new Promise ( resolve => request(character, (err, res, body) => {
                 if (err || res.statusCode !== 200) {
                     console.error('error', err ,'| statusCode' , res.statusCode)
@@ -50,7 +50,7 @@ const getNames = async () => {
     await getCharactersNames()
 
     //print the names
-    for(charName in characterNames) {
+    for(let charName in characterNames) {
         if (charName === characterNames[characterNames.length - 1]){
             process.stdout.write(charName);
         }else{
