@@ -8,6 +8,8 @@ def rotate_2d_matrix(matrix):
     '''rotates a 2d matrix 90° clockwise
     Returns: Nothing'''
     left, right = 0, len(matrix) - 1
+    
+    # it works but not in place Transpostion which makes the checker fails
 
     while left < right:
         for i in range(right - left):
