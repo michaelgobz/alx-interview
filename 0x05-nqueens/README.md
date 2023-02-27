@@ -1,8 +1,5 @@
 # n-queen-problem
 
-# 0x05. N Queens
-
-## Task
     The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
 
     Usage: nqueens N
@@ -18,14 +15,14 @@
 
 ## Mathematical intuition
 Uses the method of backtracking  
-more  detials [here](https://en.wikipedia.org/wiki/Backtracking)
+more  details [here](https://en.wikipedia.org/wiki/Backtracking)
 
 ## Usage Example.
     julien@ubuntu:~/0x08. N Queens$ ./0-nqueens.py 4
     [[0, 1], [1, 3], [2, 0], [3, 2]]
     [[0, 2], [1, 0], [2, 3], [3, 1]]
 
-## limitaions
+## limitations
 
 the algorithm performs bad with values of N > 20 
 this is due to python runtime draw backs.
